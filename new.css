@@ -1,0 +1,118 @@
+.myport {
+  background-color: #f1bf75;
+
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 20px 20px 0 20px;
+  margin: 10px auto;
+  display: block;
+}
+.cv {
+  background-color: rgb(235, 233, 176);
+}
+.cv p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: left;
+  justify-content: center;
+  color: black;
+  font-style: italic;
+}
+.container h1,
+h3 {
+  text-align: left;
+  color: #2e5aab;
+}
+.container ul {
+  list-style-type: square;
+  padding-left: 20px;
+  color: black;
+}
+.container {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+}
+.about {
+  padding: 10px;
+  text-align: center;
+}
+
+.footer {
+  background-color: #503d3d;
+  color: wheat;
+}
+.edu {
+  margin-top: 70px;
+  padding: 30px;
+}
+.edu p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: left;
+  justify-content: center;
+  color: black;
+  font-style: italic;
+}
+.head {
+  font-weight: bold;
+  text-decoration: underline;
+  padding: 20px;
+}
+.proj {
+  margin-top: 40px;
+  padding: 30px;
+}
+.car {
+  margin-top: 40px;
+  padding: 30px;
+}
+.car p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: left;
+  justify-content: center;
+  color: black;
+  font-style: italic;
+}
+.lang {
+  margin-top: 20px;
+  padding: 30px;
+}
+.skil ul {
+  list-style-type: square;
+  padding-left: 20px;
+  color: black;
+}
+@media (max-width: 750px) {
+  .myport {
+    padding: 15px;
+  }
+  img {
+    width: 150px;
+    height: 150px;
+  }
+  .cv p {
+    font-size: 16px;
+  }
+  .container h1,
+  h3 {
+    font-size: 24px;
+  }
+  .container ul {
+    font-size: 16px;
+  }
+  .edu {
+    margin-top: 20px;
+    padding: 15px;
+  }
+}
