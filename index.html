@@ -146,13 +146,13 @@
               </svg>
               Skills
             </h3>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>Bootstrap</li>
-              <li>React.js</li>
-              <li>Node.js</li>
+            <ul class="skills-list">
+              <li data-percent="90">HTML</li>
+              <li data-percent="85">CSS</li>
+              <li data-percent="55">JavaScript</li>
+              <li data-percent="75">Bootstrap</li>
+              <li data-percent="72">React.js</li>
+              <li data-percent="60">Node.js</li>
             </ul>
           </div>
         </div>
@@ -286,5 +286,73 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const skills = document.querySelectorAll(".skills-list li");
+
+          // When page loads, animate all bars
+          skills.forEach((skill) => {
+            const percent = skill.getAttribute("data-percent");
+            const bar = skill;
+
+            // Animate width
+            setTimeout(() => {
+              bar.style.setProperty("--progress", percent + "%");
+              bar.style.transition = "width 1.5s ease-out";
+              bar.style.setProperty("--percent", percent);
+              bar.style.setProperty("--fill", percent + "%");
+
+              // Animate the ::before bar
+              bar.style.setProperty("background", "linear-gradient(90deg, #ffb400, #ff7f00)");
+              bar.style.setProperty("color", "#111");
+              bar.style.setProperty("position", "relative");
+              bar.style.setProperty("overflow", "hidden");
+              bar.style.setProperty("border-radius", "12px");
+
+              // Animate the pseudo-element width manually
+              bar.querySelector?.("::before");
+              bar.style.setProperty("--width", percent + "%");
+              bar.style.setProperty("--transition", "1.5s ease-out");
+              bar.style.setProperty("--color", "#ffb400");
+
+              // Trigger CSS ::before animation
+              bar.style.setProperty("--progress", percent + "%");
+              bar.style.setProperty("width", percent + "%");
+
+              // Reveal percentage text
+              skill.style.setProperty("--percent-opacity", "1");
+              skill.style.setProperty("opacity", "1");
+              skill.style.setProperty("--after-opacity", "1");
+              skill.style.setProperty("--after-transition", "1s ease");
+              skill.style.setProperty("--after-delay", "0.8s");
+
+              skill.style.setProperty("transition", "all 1.5s ease");
+              skill.style.setProperty("--percent-opacity", "1");
+              skill.style.setProperty("--after-opacity", "1");
+              skill.style.setProperty("opacity", "1");
+
+              skill.style.setProperty("transition-delay", "0.3s");
+              skill.style.setProperty("transition-duration", "1.5s");
+              skill.style.setProperty("transition-timing-function", "ease-in-out");
+
+              // Now animate width via CSS
+              skill.style.setProperty("--width", percent + "%");
+              skill.style.setProperty("--fill", percent + "%");
+              skill.style.setProperty("--percent", percent);
+              skill.style.setProperty("--opacity", "1");
+              skill.style.setProperty("animation", "fillBar 1.5s forwards");
+
+              // Reveal percentage after delay
+              setTimeout(() => {
+                skill.style.setProperty("--opacity", "1");
+                skill.style.opacity = 1;
+              }, 800);
+            }, 300);
+          });
+        });
+      </script>
+
+    
   </body>
 </html>

@@ -116,3 +116,58 @@ h3 {
     padding: 15px;
   }
 }
+
+/* skills-list */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  position: relative;
+  margin: 15px 0;
+  padding: 12px 15px;
+  background: #f1f1f1;
+  border-radius: 12px;
+  overflow: hidden;
+  font-weight: 500;
+  color: #222;
+}
+
+/* Progress background bar */
+.skills-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #ffb400, #ff7f00);
+  border-radius: 12px;
+  transition: width 1.5s ease-out;
+  z-index: 0;
+}
+
+/* Skill name */
+.skills-list li span,
+.skills-list li {
+  position: relative;
+  z-index: 1;
+}
+
+/* Percentage text */
+.skills-list li::after {
+  content: attr(data-percent) '%';
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+@keyframes fillBar {
+  from { width: 0; }
+  to { width: var(--fill); }
+}
